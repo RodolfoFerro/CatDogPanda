@@ -4,8 +4,8 @@ import pickle
 import cv2
 
 
-model_path = "smallvggnet.model"
-label_bin = "smallvggnet_lb.pickle"
+model_path = "model/smallvggnet.model"
+label_bin = "model/smallvggnet_lb.pickle"
 lb = pickle.loads(open(label_bin, "rb").read())
 model = load_model(model_path)
 
