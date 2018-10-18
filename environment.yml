@@ -1,0 +1,14 @@
+name: catdog
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python>=3.6
+  - scipy
+  - numpy
+  - scikit-learn
+  - opencv
+  - tensorflow>=1.9.0
+  - tensorboard
+  - tensorflow-hub
+  - keras
