@@ -17,8 +17,8 @@ while(True):
     ret, frame = cap.read()
     frame = cv2.resize(frame, (640, 360))
     image = frame.copy()
-    image = image[30:280, 50:300]
-    cv2.imshow('What computer sees', image)
+    # image = image[30:280, 50:300]
+    # cv2.imshow('What computer sees', image)
     image = cv2.resize(image, (64, 64))
     image = image.reshape((1, image.shape[0], image.shape[1], image.shape[2]))
 
@@ -28,7 +28,7 @@ while(True):
     label = lb.classes_[i]
 
     # draw the class label + probability on the output image
-    cv2.rectangle(frame, (30, 50), (230, 250), (250, 150, 10), 2)
+    # cv2.rectangle(frame, (30, 50), (230, 250), (250, 150, 10), 2)
     text = "{}: {:.2f}%".format(label, preds[0][i] * 100)
     cv2.putText(frame, text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7,
                 (0, 255, 0), 2)
